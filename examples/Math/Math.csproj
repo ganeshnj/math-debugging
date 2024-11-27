@@ -4,6 +4,13 @@
     <PackageId>Math</PackageId>
     <Version>1.0.0</Version>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
+
+    <!-- Source link -->
+    <PackageProjectUrl>https://github.com/ganeshnj/math-debugging</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ganeshnj/math-debugging.git</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,5 +21,9 @@
     <None Include="runtimes\**\**\*.dll" Pack="true" PackagePath="runtimes" />
     <None Include="runtimes\**\**\*.pdb" Pack="true" PackagePath="runtimes" />
   </ItemGroup>
+
+  <ItemGroup>
+  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+</ItemGroup>
 
 </Project>
