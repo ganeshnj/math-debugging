@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Math</PackageId>
+    <Version>1.0.0</Version>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- build assets -->
+    <None Include="build\**\*" Pack="true" PackagePath="build" />
+
+    <!-- runtime shared libraries and pdbs -->
+    <None Include="runtimes\**\**\*.dll" Pack="true" PackagePath="runtimes" />
+    <None Include="runtimes\**\**\*.pdb" Pack="true" PackagePath="runtimes" />
+  </ItemGroup>
+
+</Project>
